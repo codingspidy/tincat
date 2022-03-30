@@ -1,0 +1,725 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+    --clr-pink:#EED6C4;
+    --clr-red:#FF4C68;
+    
+    /* font-sizes */
+    --fs-900: 4.5rem;
+    --fs-800: 3rem;
+    --fs-700: 2.6rem;
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1.1rem;
+    --fs-300: .925rem;
+    --fs-200: 0.8rem;
+    --fs-100: 0.7rem;
+
+    /* font-families */
+    --ff-sans: "Karla", sans-serif;
+}
+
+
+@media (min-width: 1024px) {
+    :root {
+        /* font-sizes */
+        --fs-900: 6rem;
+        --fs-800: 4rem;
+        --fs-700: 4rem;
+        --fs-600: 2.5rem;
+        --fs-500: 2rem;
+        --fs-400: 1.3rem;
+    }
+}
+
+/* ------------------- */
+/*   Utility classes   */
+/* ------------------- */
+
+/* colors */
+
+.bg-pink {background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    
+    }
+.bg-red { background-color:  var(--clr-red); }
+.bg-white { background-color: white; }
+.bg-black { background-color: black; }
+.bg-gold { background-color: #9b870c;}
+
+.text-white { color: white; }
+.text-black { color: black }
+.text-gray { color: #676767; }
+.text-red { color:  var(--clr-red); }
+
+/* typography */
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+.fs-100 { font-size: var(--fs-100); }
+
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+.fs-500 {
+    line-height: 1.2;
+} 
+
+.fw-200 { font-weight: 200;}
+.fw-400 { font-weight: 400; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800;}
+.fw-900 { font-weight: 900; }
+
+.ff-sans { font-family: var(--ff-sans); } 
+.ff-headings-sans { font-family: 'Montserrat', sans-serif; }
+
+.letter-spacing-2 { letter-spacing: 2.5px; } 
+.letter-spacing-1 { letter-spacing: 1.5px; } 
+
+.uppercase { text-transform: uppercase; }
+
+
+/*-------------------  */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture, 
+div, 
+section,
+img {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+ul { list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-sans);
+    font-size: var(--fs-400);
+    line-height: 1.5;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: black;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    
+    overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select,
+a {
+    font: inherit;
+    color: inherit;
+}
+ 
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------Reset Bootstrap------------ */
+
+/* changing color of carousel indicators & controls */
+.carousel-control-next,
+.carousel-control-prev,
+.carousel .carousel-indicators li {
+    filter: invert(100%);
+}
+
+/* carousel controls position fixing */
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    display: none;
+}
+
+.carousel-control-prev {
+    left: 6%;
+    top: 50%;
+}
+
+ .carousel-control-next {
+     right: 6%;
+     top: 50%;
+}
+ 
+
+
+/*-------------------  */
+/* Utility Classes     */
+/* ------------------- */
+.flex { display: flex; }
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}  
+
+.flex-column-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ .grid { 
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     max-width: 90%;
+     margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+.m-bottom-sm { margin-bottom: .5em;}
+.m-bottom-md { margin-bottom: 2rem;}
+.m-bottom-lg { margin-bottom: 4rem;}
+
+.italic { font-style: italic; }
+
+.text-center { text-align: center; }
+
+.width-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*-------------------  */
+/* My Styles           */
+/* ------------------- */
+
+/* Typography */
+
+
+.carousel-item p { 
+    margin-bottom: 1em; 
+    line-height: 1.3;
+    text-align: center;
+}
+
+footer a { color: black} 
+footer a:hover { 
+    color: black;
+    text-decoration: none;
+}
+
+.social-links-div a { padding: 0 .3em; }
+
+.copyright {
+   padding: .1em 0;
+}
+
+
+/* ----------------------------------- */
+/* ----------Components -------------- */
+/* ----------------------------------- */
+.logo-div { 
+    padding-inline: .5em; 
+    margin-bottom: 7px;
+}  
+
+.logo-img { 
+    width: 2.5rem; 
+    margin-right: .3em;
+    position: relative;
+    top: 2px;
+}
+.logo-text { font-family: 'Playfair Display', serif; }
+
+.login-btn {
+    display: block;
+    padding: .3em .9em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.login-btn:not(.homepage-intro .login-btn) {
+    background-color: #FF4C68;
+    color: white;
+}
+
+.homepage-intro .login-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    position: relative;
+    bottom: 2px;
+    border-color: transparent;
+    text-decoration: none;
+    color: white;
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.create-acc-btn {
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    padding: .7em .5em;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.join-now-btn:hover, 
+.create-acc-btn:hover {
+    background: #FF4C68;
+}
+
+.left-quote {
+     margin-left: -23px;
+    color: black;
+}
+
+.clients-icon {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 100px;
+    margin-right: 1em;
+}
+
+.join-now-btn {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: .5em .6em;
+    border-radius: 5px;
+    background: #FF4c68;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.features-join-btn {
+    margin: 3rem auto 0 auto;
+}
+
+.google-play-btn, 
+.app-store-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 170px;
+    height: 60px;
+    padding: .2em 0;
+    border-radius: 5px;
+}
+
+.features-div i {
+    color: #FF4C68;
+}
+
+.tiers {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.tiers div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.buy-btn {
+    border-radius: 5px;
+    border: none;
+    padding: .3em 1em;
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+.tiers img {
+    align-self: center;
+}
+
+/* .buy-gold-btn {
+    position: relative;
+    top: 1em;
+}
+
+.buy-plus-btn {
+    position: relative;
+    top: .7em;
+} */
+
+.plus-tier,
+.gold-tier,
+.platinum-tier {
+    width: 330px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+    padding: 1.5em;
+
+}
+
+.plus-tier ul { padding-left: 2.1em; }
+.gold-tier ul { padding-left: .4em;}
+
+
+.tiers ul {
+    color: #676767;
+    line-height: 1.2;
+    list-style: disc;
+}
+
+.tiers ul li { padding-block: .2em; }
+
+
+/* ------------------------------------ */
+/*               Navigation             */
+/* ------------------------------------ */
+
+header { 
+    height: 90px; 
+    padding-inline: .5em;
+}
+
+.primary-navbar{ align-items: center; }
+
+.navbar-toggle-btn { display: none; }
+
+.primary-navbar li { padding-inline: 1em; }
+
+.nav-links { 
+    padding-block: .4em;
+    color: white;
+}
+
+.nav-links:hover {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+
+@media (max-width: 767px) {
+
+    .navbar-toggle-btn {
+        width: 1.6rem;
+        aspect-ratio: 1;
+        display: block;
+        background: url("images/bars-solid.svg") no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 2.2rem;
+        right: 1rem;
+        z-index: 1000;
+        border: none;
+        border-radius: 1px;
+    }
+    .navbar-toggle-btn[aria-expanded = true] {
+        background: url("images/close-solid.svg") no-repeat center;
+    }
+    .navbar-toggle-btn:focus{
+        outline: none;
+    }
+
+    .primary-navbar {
+        position: fixed;
+        inset: 0 0 0 0;
+        flex-direction: column;
+        align-items: stretch;
+        background: rgba(0,0,0,0.9);
+        z-index: 100;
+        padding: 8rem 2rem 0 2rem;
+        transform: translateX(100%);
+    }
+    .primary-navbar[data-visible = true] {
+        transform: translateX(0);
+    }
+
+    .primary-navbar li {
+        padding-inline: 0;
+        width: 100%;
+        min-width: fit-content;  
+    }
+
+    .primary-navbar li:not(.different) {
+        background-color: white;
+        padding-block: .4rem;
+        padding-inline: 1rem;
+        margin-bottom: 1rem; 
+        border-radius: 3px;    
+    }              
+    
+    .nav-links { 
+        color: black;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .nav-links:hover {
+        border-bottom: 2px solid black;
+        color: black; 
+    }
+    
+    .different { margin-top: 5rem;}
+
+    .different .login-btn { 
+        width: 100%;
+        background: #FF416C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+        color: white;
+        padding-block: .5em;
+    }
+}
+
+/* ------------------------------ */
+/*------------- Layout----------- */
+/* ------------------------------ */
+
+
+/* ---------Homepage------------- */
+.homepage-intro {
+    background: linear-gradient(180deg, rgba(0,0,0, 0.9), rgba(0,0,0,0.5)), url("images/intro-bg.png") no-repeat center;
+    width: 100%;
+    height: 100vh;
+    max-height: 916px;
+ }
+
+ .intro-headings {
+     width: 90%;
+     margin-top: 40%;
+     margin-inline: auto;
+     text-align: center;
+ }
+
+.carousel-item{
+    padding: 3em 4em;
+    margin: 0 auto 2em auto;
+    width: 90%;
+    max-width: 630px;
+    min-height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.carousel-item div.flex { justify-content: center; }
+
+.carousel-item div.flex p { 
+    align-self: center;
+    position: relative;
+    top: 7px;
+ }
+
+ 
+ .testimonials-section {
+    padding-block: 4em;
+}
+
+.carousel-inner {
+    padding-block: 2em;
+}
+
+
+.above-footer-div {
+    background: linear-gradient(180deg, rgba(0,0,0, 0.9), rgba(0,0,0,0.5)), 
+                url("images/intro-bg.png") no-repeat center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 2em;
+    align-items: center;
+}
+
+footer { 
+    padding: 2em 2em 0 2em;
+    gap: 4rem;
+    max-width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* All pages footer except homepage */
+.other-footers { border-top: 1px solid gray;}
+
+
+/* ------ Why Us? page -------- */
+.features-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.features-div p {
+    max-width: 225px;
+    margin: 0 auto;
+}
+
+.why-tinder { padding: 5rem 0; }
+
+.why-tinder-para {
+     max-width: 800px; 
+     margin: 0 auto;
+}
+
+
+/* -----About Page------- */
+.about-section { 
+ padding: 7rem 2rem;
+ width: 90%;
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+/* -----Subscription page------- */
+.subscription-section { padding-block: 5em; }
+
+
+
+
+
+/* ---------------------------------- */
+/* ----------MEDIA QUERIES----------- */
+/* ---------------------------------- */
+
+@media (min-width: 767px) {
+    .intro-headings {
+        margin-top: 30vh;
+    }
+
+    .intro-second-child { text-align: left; }
+
+    .download-btn-div {
+        display: flex;
+        gap: 20px;
+    }
+
+    footer h3 { text-align: center;}
+
+    .footer-first-child {
+        width: 53%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 100%;
+    }
+
+    .carousel-item div.flex {
+        justify-content: flex-start;
+    }
+
+
+    .carousel-item p { text-align: left; }
+    
+    .features-div { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+    .logo-img { width: 3.5rem; }
+}
+
+@media (min-width: 900px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: block;
+    }
+}
+
+@media (min-height: 900px) {
+    .homepage-intro{background-size: cover; }
+
+  
+}

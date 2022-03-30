@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Google fonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=Montserrat:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+<section class="homepage-intro">
+  <header class="primary-header flex-space-between">
+   <a class="logo-div flex" href="index.html">
+     <img class="logo-img" src="images/paw-white.svg" alt="">
+     <h1 class="logo-text text-white fs-700 fw-600">tincat</h1>
+   </a>
+
+    <button class="navbar-toggle-btn" aria-controls="primary-navbar">
+      <span class="sr-only" aria-expanded="false">MENU</span>
+    </button>
+    
+    <nav>
+      <ul class="primary-navbar flex" id="primary-navbar" data-visible="false">
+          <li><a class="nav-links" href="about.html">About</a></li>
+          <li><a class="nav-links" href="features.html">Why Us ?</a></li>
+          <li><a class="nav-links" href="subscriptions.html">Subscriptions</a></li>
+          <li class="different"><a class="login-btn fw-700" href="">Log in</a></li>
+      </ul>
+    </nav> 
+  </header>
+   
+    <div class="intro-headings">
+      <h2 class="text-white fs-700 fw-800 m-bottom-lg">Meet New And Interesting Cats Nearby.</h2>
+      <a class="create-acc-btn text-white fs-500 fw-600 m-bottom-md" href="">CREATE ACCOUNT</a>
+    </div>
+ </section>
+
+   <section class="testimonials-section m-bottom-md">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-container" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="carousel-indicators-2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2" class="carousel-indicator-1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <i class="fas fa-quote-left m-bottom-sm left-quote"></i>
+          <p class="reviews-para fs-400 text-gray">With tincat's help I have found the love of mine. Alhamdulillah. 
+            May Allah reunite us in Jannah. May Allah grant all of you a pious companion. Ameen. </p>
+         <div class="flex">
+           <img class="clients-icon" src="images/hijabi-cat.jpg" alt="">
+           <p class="fs-300 fw-600 text-black">Muizzi</p>
+         </div>
+        </div>
+
+        <div class="carousel-item">
+          <i class="fas fa-quote-left m-bottom-sm left-quote"></i>
+          <p class="reviews-para fs-400 text-gray">We no longer have to lure other cats for love. 
+          On tincat we have found each other because we were meant to be! And now we will live happily ever after. </p>
+          <div class="flex">
+            <img class="clients-icon" src="images/cat-couple.jpg" alt="">
+            <p class="fs-300 fw-600 text-black">Nibba & Nibbi</p>
+          </div>  
+        </div>  
+
+        <div class="carousel-item">
+          <i class="fas fa-quote-left m-bottom-sm left-quote"></i>
+          <p class="reviews-para fs-400 text-gray">On this platform I have found a handsome groom 
+             for my daughter who is concerned on his deen and also successfull in his career. </p>
+           <div class="flex">
+             <img class="clients-icon" src="images/grandpa-cat.jpg" alt="">
+             <p class="fs-300 fw-600 text-black">Waleed Sahb</p>
+           </div>  
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+    
+  <section class="above-footer-div">
+      <h2 class="fs-600 fw-700 text-white m-bottom-md">Find the true love of your cat's life today.</h2>
+      <a class="join-now-btn text-white fs-500 fw-700" href="">JOIN NOW!</a>
+  </section>
+
+
+<div class="footer-wrapper">
+  <footer class="flex  m-bottom-md">
+
+    <div class="footer-first-child">
+    <ul class="legal-ul m-bottom-md">
+      <li class="fs-400 fw-600">LEGAL</li>
+      <li><a class="fs-300" href="">Privacy</a></li>
+      <li><a class="fs-300" href="">Terms</a></li>
+      <li><a class="fs-300" href="">Cookie Policy</a></li>
+    </ul>
+
+    <div class="social-links-div">
+      <!-- <p class="fw-600">SOCIALS</p> -->
+      <a class="" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+      <a class="" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a class="" href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+
+    <div class="footer-second-child">
+      <h3 class="fs-500 fw-700 m-bottom-sm">GET THE APP!</h3>
+
+      <div class="download-btn-div">
+        <a class="app-store-btn bg-black m-bottom-sm" href="">
+          <i class="fab fa-apple fa-2x text-white"></i>
+          <div>
+            <p class="fs-100 uppercase text-white">Download on the</p>
+            <p class="fs-400 text-white">App Store</p>
+          </div> 
+        </a>
+        <a class="google-play-btn bg-black" href="">
+          <i class="fab fa-google-play fa-2x text-white"></i>
+          <div>
+            <p class="fs-100 uppercase text-white">Get it on</p>
+            <p class="fs-400 text-white">Google Play</p>
+          </div>
+        </a>
+      </div>
+    
+  </div>
+  </footer>
+  <p class="copyright text-center text-black fs-200 fw-200 m-bottom-md"><i class="far fa-copyright"></i> 2021 tincat, All rights reserved</p>
+
+</div>
+  
+
+</body>
+</html>
