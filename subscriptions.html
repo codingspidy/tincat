@@ -1,133 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Font awesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <!-- Google fonts CDN -->
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600;700;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600;700;800&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <!-- My CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
 
     <script src="index.js" defer></script>
-</head>
-<body>
-  <header class="primary-header flex-space-between bg-black">
-    <a class="logo-div flex" href="index.html">
-      <img class="logo-img" src="images/paw-red.svg" alt="">
-      <h1 class="logo-text text-white fs-700 fw-600">tincat</h1>
-    </a>
- 
-     <button class="navbar-toggle-btn" aria-controls="primary-navbar">
-       <span class="sr-only" aria-expanded="false">MENU</span>
-     </button>
-     
-     <nav>
-       <ul class="primary-navbar flex" id="primary-navbar" data-visible="false">
-           <li><a class="nav-links" href="about.html">About</a></li>
-           <li><a class="nav-links" href="features.html">Why Us ?</a></li>
-           <li><a class="nav-links" href="subscriptions.html">Subscriptions</a></li>
-           <li class="different"><a class="login-btn fw-700" href="">Log in</a></li>
-       </ul>
-     </nav> 
-   </header>
+  </head>
+  <body>
+    <header class="primary-header flex-space-between bg-black">
+      <a class="logo-div flex" href="index.html">
+        <img class="logo-img" src="images/paw-red.svg" alt="" />
+        <h1 class="logo-text text-white fw-600">tincat</h1>
+      </a>
+
+      <button class="navbar-toggle-btn" aria-controls="primary-navbar">
+        <span class="sr-only" aria-expanded="false">MENU</span>
+      </button>
+
+      <nav>
+        <ul
+          class="primary-navbar flex"
+          id="primary-navbar"
+          data-visible="false"
+        >
+          <li><a class="nav-links" href="about.html">About</a></li>
+          <li><a class="nav-links" href="features.html">Why Us ?</a></li>
+          <li>
+            <a class="nav-links" href="subscriptions.html">Subscriptions</a>
+          </li>
+          <li class="different">
+            <a class="login-btn fw-700" href="">Log in</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <section class="subscription-section grid">
-<div>
-
       <div>
-       <h2 class="text-center fs-600 fw-700 italic">Subscription Tiers</h2>
-       <p class="text-center text-gray m-bottom-lg">Upgrade to Plus, Gold or Platinum for an enhanced Tincat experience.</p>
-      </div>
-      
-       <div class="tiers">
-           <div class="plus-tier">
-               <img class="" src="images/tincat-plus.png" alt="">
-               <ul class="">
-                   <li>20 more Likes</li>
-                   <li>10 more Rewinds</li>
-                   <li>Hide Advertisements</li>
-               </ul>
-              <a class="buy-plus-btn buy-btn bg-red text-white fw-700" href="">BUY NOW</a>
-           </div>
-
-           <div class="gold-tier">
-            <img class="" src="images/tincat-gold.png" alt="">
-            <ul class="width-80">
-                <li>See who likes you</li>
-                <li>Unlimited Likes</li>
-                <li>And everything you love from <span>Tinder Plus</span></li>
-            </ul>
-           <a class="buy-gold-btn buy-btn bg-gold text-white fw-700" href="">BUY NOW</a>
+        <div>
+          <h2 class="text-center fs-600 fw-700 italic">Subscription Tiers</h2>
+          <p class="text-center text-gray m-bottom-lg">
+            Upgrade to Plus, Gold or Platinum for an enhanced Tincat experience.
+          </p>
         </div>
 
-        <div class="platinum-tier">
-            <img class="" src="images/tincat-platinum.png" alt="">
-            <ul class="width-80">
-                <li>Message before Matching</li>
-                <li>Prioritized likes</li>
-                <li >And everything you love from <span>Tinder Gold</span></li>
+        <div class="tiers">
+          <div class="plus-tier">
+            <img class="" src="images/tincat-plus.png" alt="" />
+            <ul class="">
+              <li>20 more Likes</li>
+              <li>10 more Rewinds</li>
+              <li>Hide Advertisements</li>
             </ul>
-            <a class="buy-platinum-btn buy-btn bg-black fw-700 text-white" href="">BUY NOW</a>
-        </div>
-       </div>
+            <a class="buy-plus-btn buy-btn bg-red text-white fw-700" href=""
+              >BUY NOW</a
+            >
+          </div>
 
+          <div class="gold-tier">
+            <img class="" src="images/tincat-gold.png" alt="" />
+            <ul class="width-80">
+              <li>See who likes you</li>
+              <li>Unlimited Likes</li>
+              <li>And everything you love from <span>Tinder Plus</span></li>
+            </ul>
+            <a class="buy-gold-btn buy-btn bg-gold text-white fw-700" href=""
+              >BUY NOW</a
+            >
+          </div>
+
+          <div class="platinum-tier">
+            <img class="" src="images/tincat-platinum.png" alt="" />
+            <ul class="width-80">
+              <li>Message before Matching</li>
+              <li>Prioritized likes</li>
+              <li>And everything you love from <span>Tinder Gold</span></li>
+            </ul>
+            <a
+              class="buy-platinum-btn buy-btn bg-black fw-700 text-white"
+              href=""
+              >BUY NOW</a
+            >
+          </div>
+        </div>
       </div>
     </section>
 
-<div class="footer-wrapper">
-    <footer class="flex other-footers m-bottom-md">
-    
+    <div class="footer-wrapper">
+      <footer class="flex other-footers m-bottom-md">
         <div class="footer-first-child">
-        <ul class="legal-ul m-bottom-md">
-          <li class="fs-400 fw-600">LEGAL</li>
-          <li><a class="fs-300" href="">Privacy</a></li>
-          <li><a class="fs-300" href="">Terms</a></li>
-          <li><a class="fs-300" href="">Cookie Policy</a></li>
-        </ul>
-    
-        <div class="social-links-div">
-          <!-- <p class="fw-600">SOCIALS</p> -->
-          <a class="" href=""><i class="fab fa-facebook"></i></a>
-          <a class="" href=""><i class="fab fa-instagram"></i></a>
-          <a class="" href=""><i class="fab fa-twitter"></i></a>
+          <ul class="legal-ul m-bottom-md">
+            <li class="fs-400 fw-600">LEGAL</li>
+            <li><a class="fs-300" href="">Privacy</a></li>
+            <li><a class="fs-300" href="">Terms</a></li>
+            <li><a class="fs-300" href="">Cookie Policy</a></li>
+          </ul>
+
+          <div class="social-links-div">
+            <!-- <p class="fw-600">SOCIALS</p> -->
+            <a class="" href=""><i class="fab fa-facebook"></i></a>
+            <a class="" href=""><i class="fab fa-instagram"></i></a>
+            <a class="" href=""><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-      </div>
-    
+
         <div class="footer-second-child">
           <h3 class="fs-500 fw-700 m-bottom-sm">GET THE APP!</h3>
-    
+
           <div class="download-btn-div">
             <a class="app-store-btn bg-black m-bottom-sm" href="">
               <i class="fab fa-apple fa-2x text-white"></i>
               <div>
                 <p class="fs-100 uppercase text-white">Download on the</p>
                 <p class="fs-400 text-white">App Store</p>
-              </div> 
+              </div>
             </a>
             <a class="google-play-btn bg-black" href="">
               <i class="fab fa-google-play fa-2x text-white"></i>
               <div>
                 <p class="fs-100 uppercase text-white">Get it on</p>
                 <p class="fs-400 text-white">Google Play</p>
-            </div>
+              </div>
             </a>
           </div>
-        
-      </div>
+        </div>
       </footer>
-      <p class="copyright text-center text-black fs-200 fw-200 m-bottom-md"><i class="far fa-copyright"></i> 2021 tincat, All rights reserved</p>
-     </div> 
-
-</body>
+      <p class="copyright text-center text-black fs-200 fw-200 m-bottom-md">
+        <i class="far fa-copyright"></i> 2021 tincat, All rights reserved
+      </p>
+    </div>
+  </body>
 </html>
